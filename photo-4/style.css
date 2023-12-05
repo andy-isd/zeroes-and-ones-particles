@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+body,html{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    background: white;
+    margin: 0;
+}
+body {
+    background: #101010;
+}
+.animation-container {
+    position: relative;
+    margin: 80px auto;
+    width: 800px;
+}
+canvas {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 800px;
+    height: 533px;
+}

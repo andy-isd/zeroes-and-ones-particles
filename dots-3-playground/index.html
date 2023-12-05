@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+<main class="main">
+
+
+    <style>
+        .animation-container {
+            position: relative;
+            margin: 0px auto 80px auto;
+            width: 1216px;
+            height: 564px;
+        }
+
+        #canvas1 {
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 1216px;
+            height: 564px;
+        }
+
+        datalist {
+            display: flex;
+            justify-content: space-between;
+            width: 200px;
+        }
+
+        option {
+            padding: 0;
+        }
+
+        input[type="range"] {
+            width: 200px;
+            margin: 0;
+        }
+
+        .control {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            display: inline-block;
+        }
+
+        label {
+            cursor: pointer;
+        }
+
+    </style>
+
+    <div class="control">
+        Draw each N-th point: <span id="totalpoints_value">1</span><br />
+        <input type="range" id="totalpoints" name="totalpoints" min="1" max="8" step="1" value="2" list="totalpointss" />
+        <datalist id="totalpointss">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+            <option value="6" label="6"></option>
+            <option value="7" label="7"></option>
+            <option value="8" label="8"></option>
+        </datalist>
+    </div>
+
+    <div class="control">
+        Point size: <span id="pointsize_value">1</span><br />
+        <input type="range" id="pointsize" name="pointsize" min="1" max="5" step="0.2" value="1" list="pointsizes" />
+        <datalist id="pointsizes">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+        </datalist>
+    </div>
+
+    <div class="control">
+        Line width (Circle only): <span id="linewidth_value">1</span><br />
+        <input type="range" id="linewidth" name="linewidth" min="1" max="5" step="0.2" value="1" list="linewidths" />
+        <datalist id="linewidths">
+            <option value="1" label="1"></option>
+            <option value="2" label="2"></option>
+            <option value="3" label="3"></option>
+            <option value="4" label="4"></option>
+            <option value="5" label="5"></option>
+        </datalist>
+    </div>
+
+    <div class="control">
+        Shape: <span id="shape_value">rect</span><br />
+        <input type="radio" id="shape_rect" name="shape" value="rect" checked /><label for="shape_rect">Rectangle</label>
+        <input type="radio" id="shape_circ" name="shape" value="circ" /><label for="shape_circ">Circle</label>
+    </div>
+
+    <div class="animation-container">
+<!--        <img class="original" src="AdobeStock_421263495_cropped.png" />-->
+        <canvas id="canvas1"></canvas>
+        <script src="script.js"></script>
+    </div>
+
+</body>
+</html>
