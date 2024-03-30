@@ -20,7 +20,7 @@ let mouse1 = {
 }
 
 let radius = 80;
-let zeroone = 0.9;
+let zeroone = 0.8;
 let zeroesPercent = 0.25;
 let minSpread = 0.3;
 
@@ -30,8 +30,8 @@ let dotsAcceleration = 2;
 let dotMinSpeed = zoMinSpeed * dotsAcceleration;
 let dotSpeed = zoSpeed * dotsAcceleration;
 
-let zoZoom = 2;
-let zoZoomSpeed = 80;
+let zoZoom = 4;
+let zoZoomSpeed = 140;
 let invertColor = false;
 
 function componentToHex(c) {
